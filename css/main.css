@@ -45,7 +45,7 @@ nav.main_nav {
    background-color: #232427;
 }
 
-.bar_comandi {
+.player_bar {
   position: absolute;
   bottom: 0;
   z-index: 999;
@@ -173,6 +173,7 @@ nav.main_nav .logo img {
 
 .main_menu li:active {
   border-left: solid 3px #1ED760;
+  border-radius: 1px;
 }
 
 /* playlist_menu */
@@ -246,4 +247,46 @@ nav.main_nav .logo img {
   padding: 10px 30px;
   border: solid 1px white;
   border-radius: 19px;
+}
+
+/* MAIN */
+main {
+  padding: 20px;
+}
+/* SECTION GENRE_NAV */
+.genre_list {
+  width: 90%;
+  margin: auto;
+}
+
+.genre_nav ul {
+  justify-content: center;
+  margin-top:
+}
+
+.genre_list li {
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.genre_list li:last-child {
+  margin-right: 0;
+}
+
+.genre_list h3 {
+  font-weight: 500;
+  border-bottom: 3px;
+}
+
+.linea_green {
+  width: 30px;
+  height: 3px;
+  background-color: #1ED760;
+  border-radius: 1px;
+  opacity: 1;
+}
+
+.genre_list li.flex{
+  flex-direction: column;
+  align-items: center;
 }
