@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
   font-family: 'Poppins', sans-serif;
 }
 
@@ -9,19 +10,22 @@
 .main_container {
   position: relative;
 
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 
    background-image: linear-gradient(to top, #121212, #121212, #121212, #121212, #121212, #161616, #191919, #1d1d1d, #262626, #2e2e2e, #383838, #414141);
 }
 
-.main_nav {
+nav.main_nav {
   position: absolute;
+  top: 0;
   left: 0;
+  bottom: 80px;
   z-index: 950;
 
   width: 240px;
-  height: 100vh;
+
+  /* height: 100vh; */
 
   background-color: black;
 }
@@ -61,10 +65,172 @@ main {
 
 /* RICORRENTI */
 
-p {
+.flex {
+  display: flex;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* testi */
+h3 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  color: white;
+}
+
+p,
+span,
+a {
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
   color: white;
   opacity: 0.6;
 }
+
+.text_left {
+  text-align: left;
+}
+
+.text_center {
+  text-align: center;
+}
+
+/* elementi specifici */
+a {
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+.inline li {
+  display: inline-flex;
+}
+
+ul li {
+  list-style-type: none;
+  text-transform: capitalize;
+}
+
+/* MAIN_NAV */
+
+nav.main_nav .container {
+  flex-direction: column;
+  height: 100%;
+  /* overflow: auto; */
+}
+
+nav.main_nav .menu {
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  height: 100%;
+}
+
+/* logo */
+nav.main_nav .logo img {
+  width: 80%;
+  padding: 20px;
+}
+
+/* main menu */
+.main_menu img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.main_menu li {
+  padding-left: 17px;
+  border-left: solid 3px;
+}
+
+.main_menu li:first-of-type {
+  border-left: solid 3px #1ED760;
+}
+
+.main_menu li a {
+  line-height: 35px;
+  vertical-align: middle;
+}
+
+.main_menu li:first-of-type a {
+  opacity: 1;
+}
+
+.main_menu li:active {
+  border-left: solid 3px #1ED760;
+}
+
+/* playlist_list */
+.playlist_menu {
+  padding: 20px;
+  overflow: auto;
+}
+
+.playlist_menu h3,
+.crea {
+  margin-bottom: 10px;
+}
+
+.crea > *,
+.playlist_menu li {
+  line-height: 30px;
+}
+
+.crea span,
+.crea p {
+  opacity: 1;
+}
+
+.playlist_menu span {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  font-size: 35px;
+  color: black;
+  background-color: white;
+  margin-right: 10px;
+}
+
+/* menu_down */
+.menu_down {
+  padding: 5px 20px 10px 20px;
+}
+
+.install img {
+  height: 15px;
+  margin-right: 10px;
+}
+ .linea {
+   width: 100%;
+   height: 2px;
+   background-color: white;
+   opacity: 0.6;
+   margin: 10px 0;
+ }
+
+ .account span {
+   width: 25px;
+   height: 25px;
+   overflow: hidden;
+   color: white;
+   opacity: 1;
+   background-color: grey;
+   margin-right: 10px;
+   border-radius: 50%;
+ }
+
+ .account span img {
+
+ }
+
+
+
+/* TOP_BAR */
