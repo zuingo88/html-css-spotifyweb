@@ -7,7 +7,7 @@
 }
 
 /* MACROSTRUTTURA */
-.main_container {
+.total_container {
   position: relative;
 
   width: 100%;
@@ -15,6 +15,10 @@
 
    background-image: linear-gradient(to top, #121212, #121212, #121212, #121212, #121212, #161616, #191919, #1d1d1d, #262626, #2e2e2e, #383838, #414141);
 }
+
+/* .container {
+  position: relative;
+} */
 
 nav.main_nav {
   position: absolute;
@@ -25,17 +29,17 @@ nav.main_nav {
 
   width: 240px;
 
-  /* height: 100vh; */
-
   background-color: black;
 }
 
 .top_bar {
   position: absolute;
   top: 0;
+  left: 240px;
+  right: 0;
   z-index: 900;
 
-  width: 100%;
+  width: calc(100% - 240px);
   height: 80px;
 
    background-color: #232427;
@@ -124,12 +128,10 @@ ul li {
 nav.main_nav .container {
   flex-direction: column;
   height: 100%;
-  /* overflow: auto; */
 }
 
 nav.main_nav .menu {
   flex-direction: column;
-  justify-content: space-between;
   overflow: auto;
   height: 100%;
 }
@@ -138,6 +140,11 @@ nav.main_nav .menu {
 nav.main_nav .logo img {
   width: 80%;
   padding: 20px;
+}
+
+/* menu_up */
+.menu_up {
+  flex-grow: 1;
 }
 
 /* main menu */
@@ -168,7 +175,7 @@ nav.main_nav .logo img {
   border-left: solid 3px #1ED760;
 }
 
-/* playlist_list */
+/* playlist_menu */
 .playlist_menu {
   padding: 20px;
   overflow: auto;
@@ -184,16 +191,15 @@ nav.main_nav .logo img {
   line-height: 30px;
 }
 
-.crea span,
-.crea p {
+.crea span {
   opacity: 1;
 }
 
-.playlist_menu span {
+.playlist_menu span:first-of-type {
   text-align: center;
   width: 30px;
   height: 30px;
-  font-size: 35px;
+  font-size: 25px;
   color: black;
   background-color: white;
   margin-right: 10px;
@@ -227,10 +233,17 @@ nav.main_nav .logo img {
    border-radius: 50%;
  }
 
- .account span img {
-
- }
-
-
-
 /* TOP_BAR */
+.top_bar {
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.button {
+  flex-grow: 1;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border: solid 1px white;
+  border-radius: 19px;
+}
