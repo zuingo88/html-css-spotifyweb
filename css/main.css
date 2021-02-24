@@ -24,15 +24,16 @@ nav.main_nav {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 80px;
+  /* bottom: 80px; */
   z-index: 950;
 
   width: 240px;
+  height: calc(100% - 80px);
 
   background-color: black;
 }
 
-.top_bar {
+#top_bar {
   position: absolute;
   top: 0;
   left: 240px;
@@ -79,6 +80,10 @@ main {
 }
 
 /* testi */
+h2 {
+  color: white;
+}
+
 h3 {
   font-size: 14px;
   font-weight: bold;
@@ -179,7 +184,6 @@ nav.main_nav .logo img {
 /* playlist_menu */
 .playlist_menu {
   padding: 20px;
-  overflow: auto;
 }
 
 .playlist_menu h3,
@@ -235,10 +239,15 @@ nav.main_nav .logo img {
  }
 
 /* TOP_BAR */
-.top_bar {
+#top_bar {
   justify-content: flex-end;
   align-items: center;
   padding-right: 10px;
+}
+
+#top_bar a,
+#top_bar span {
+  opacity: 1;
 }
 
 .button {
@@ -253,20 +262,24 @@ nav.main_nav .logo img {
 main {
   padding: 20px;
 }
+
+main h2 {
+  margin-top: 20px;
+}
 /* SECTION GENRE_NAV */
 .genre_list {
   width: 90%;
   margin: auto;
 }
 
-.genre_nav ul {
+#genre_nav ul {
   justify-content: center;
-  margin-top:
 }
 
 .genre_list li {
   text-transform: uppercase;
   margin-right: 20px;
+  margin-bottom: 30px;
 }
 
 .genre_list li:last-child {
@@ -289,4 +302,74 @@ main {
 .genre_list li.flex{
   flex-direction: column;
   align-items: center;
+}
+
+/* SECTION RECENTLY */
+#recently .blocco_card {
+  justify-content: space-between;
+}
+
+/* card */
+.card {
+  flex-basis: 15%;
+  flex-shrink: 1;
+  min-width: 120px;
+  margin: 10px 1% 10px 0;
+}
+
+.screen {
+  position: relative;
+}
+
+.card .screen img {
+  width: 100%;
+  height: auto;
+}
+
+.screen_layover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.4;
+  visibility: hidden;
+}
+
+.screen_play {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 65px;
+  visibility: hidden;
+}
+
+.card:hover .screen_layover,
+.card:hover .screen_play {
+  visibility: visible;
+}
+
+.card h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.card a {
+  opacity: 1;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* SECTION PERT_TE */
+#per_te .blocco_card {
+  justify-content: flex-start;
 }
