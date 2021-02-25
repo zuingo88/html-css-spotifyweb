@@ -17,7 +17,7 @@
   <div class="total_container">
 
     <!-- MAIN_NAV -->
-    <nav class="main_nav">
+    <nav id="main_nav">
 
       <!-- container -->
       <div class="container flex">
@@ -51,12 +51,14 @@
             </div><!-- main_menu -->
 
             <!-- playlist_menu -->
-            <div class="playlist_menu">
+            <div class="playlist_menu flex">
               <h3>PLAYLIST</h3>
 
-              <a href="#"><div class="crea flex">
-                <span>+</span><span>Crea Playlist</span>
-              </div></a>
+              <a href="#">
+                <div class="crea flex">
+                  <span>+</span><span>Crea Playlist</span>
+                </div>
+              </a>
 
               <ul>
                 <li><a href="#">nome playlist</a></li>
@@ -67,7 +69,6 @@
                 <li><a href="#">nome playlist</a></li>
                 <li><a href="#">nome playlist</a></li>
               </ul>
-
             </div><!-- palylist_menu -->
 
           </div><!-- menu_up -->
@@ -95,6 +96,57 @@
         </div><!-- menu -->
       </div><!-- container -->
     </nav><!-- MAIN_NAV -->
+
+    <!-- NAV_XS -->
+    <nav id="nav_xs" class="flex">
+
+      <!-- menu_icons_xs -->
+      <div class="menu_icons_xs flex">
+
+        <ul class="text_center">
+          <li>
+            <a href="#">
+              <img id="logo_small" src="img/logo-small.svg" alt="home">
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="img/home.svg" alt="home">
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="img/search.svg" alt="search">
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="img/libreria.svg" alt="libreria">
+            </a>
+          </li>
+        </ul>
+
+      </div><!-- menu_icons_xs -->
+
+      <!-- account_icon_xs -->
+      <div class="account_icon_xs flex">
+
+        <div class="install">
+          <a href="#">
+            <img src="img/download.svg" alt="download">
+          </a>
+        </div>
+
+        <div class="account_xs">
+          <img src="img/profile.svg" alt="">
+        </div>
+
+      </div><!-- account_icon_xs -->
+
+    </nav><!-- NAV_XS -->
 
     <!-- TOP_BAR -->
     <div id="top_bar" class="flex">
@@ -420,7 +472,7 @@
       </div><!-- player -->
 
       <!-- volume -->
-      <div class="volume flex">
+      <div class="volume wrap">
         <span><i class="fas fa-list"></i></span>
         <span><i class="fas fa-desktop"></i></span>
         <span><i class="fas fa-volume-up"></i></span>
