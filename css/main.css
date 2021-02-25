@@ -11,7 +11,9 @@
   position: relative;
 
   width: 100%;
+  min-width: 270px;
   height: 100vh;
+  min-height: 320px;
 
    background-image: linear-gradient(to top, #121212, #121212, #121212, #121212, #121212, #161616, #191919, #1d1d1d, #262626, #2e2e2e, #383838, #414141);
 }
@@ -27,7 +29,7 @@
   bottom: 80px;
   z-index: 950;
 
-  width: 240px;
+  width: 225px;
   height: calc(100% - 80px);
 
   background-color: black;
@@ -51,11 +53,11 @@
 #top_bar {
   position: absolute;
   top: 0;
-  left: 240px;
+  left: 225px;
   right: 0;
   z-index: 900;
 
-  width: calc(100% - 240px);
+  width: calc(100% - 225px);
   height: 80px;
 
    background-color: #232427;
@@ -76,7 +78,7 @@
 main {
   position: absolute;
   top: 80px;
-  left: 240px;
+  left: 225px;
   right: 0;
   bottom: 80px;
 
@@ -338,11 +340,17 @@ img#logo_small {
   padding: 10px 30px;
   border: solid 1px white;
   border-radius: 19px;
+
+  transition: all 1s;
+}
+
+.button:hover {
+  transform: scale(1.1);
 }
 
 /* MAIN */
 main {
-  padding: 20px;
+  padding: 20px 5px;
 }
 
 main h2 {
@@ -388,14 +396,14 @@ main h2 {
 
 /* SECTION RECENTLY */
 #recently .blocco_card {
-  justify-content: flex-start;
+  justify-content: space-around;
 }
 
 /* card */
 .card {
   width: 15%;
-  min-width: 150px;
-  max-width: 200px;
+  min-width: 90px;
+  max-width: 220px;
   margin: 10px 1%;
 }
 
@@ -462,6 +470,11 @@ main h2 {
   justify-content: flex-start;
 }
 
+#popolari .screen img,
+#popolari .screen_layover {
+  border-radius: 50%;
+}
+
 /* PLAYER_BAR */
 #player_bar {
   justify-content: space-between;
@@ -479,7 +492,7 @@ main h2 {
 
 .little_screen {
   height: 60px;
-  width: auto;
+  width: 60px;
   margin-right: 5px;
 }
 
@@ -488,14 +501,24 @@ main h2 {
   height: 100%;
 }
 
+.descrizione a {
+
+}
+
 .descrizione span {
   font-size: 10px;
   line-height: 13px;
+  opacity: 1;
 }
 
 .brano {
   flex-direction: column;
-  justify-content: center
+  justify-content: center;
+  opacity: 1;
+}
+
+.brano a:hover {
+  text-decoration: underline;
 }
 
 .preferiti {
@@ -505,7 +528,7 @@ main h2 {
 .preferiti span {
   font-size: 15px;
   margin-left: 10px;
-  opacity: 1;
+
 }
 
 /* player */
@@ -533,6 +556,10 @@ main h2 {
 span.play {
   font-size: 25px;
 }
+
+span.play:hover {
+   transform: scale(1.1);
+ }
 
 .avanzamento {
   justify-content: space-between;
@@ -616,8 +643,6 @@ span.play {
 
   #top_bar {
     display: none;
-    /* left: 50px;
-    width: calc(100% - 50px); */
   }
 
   /* MAIN */
@@ -627,13 +652,76 @@ span.play {
   }
 
   .blocco_card {
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .card {
-    width: 40%;
-    min-width: 120px;
-    max-width: 300px;
+    width: 45%;
     flex-grow: 1;
+  }
+
+  /* BAR_COMANDI */
+  .little_screen {
+    display: none;
+  }
+
+  .comandi {
+    width: 100%;
+  }
+
+  .avanzamento .barra_totale {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .volume .barra_totale {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* VERSIONE SM */
+@media all and (min-width: 553px) and (max-width: 639px) {
+  /* MAIN */
+  #recently .blocco_card {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    width: 48%;
+    min-width: 90px;
+    max-width: 200px;
+  }
+
+  /* BAR_COMANDI */
+  .avanzamento .barra_totale {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .volume {
+    justify-content: space-around;
+  }
+
+  .volume .barra_totale {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* VERSIONE TABLET */
+@media all and (min-width: 640px) and (max-width: 878px) {
+  /* MAIN */
+  #recently .blocco_card {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .card {
+    width: 23%;
+    min-width: 90px;
+    max-width: 200px;
   }
 }
