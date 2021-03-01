@@ -166,9 +166,10 @@
 
       <!-- SECTION GENRE_NAV -->
       <section id="genre_nav">
-        <div class="genre_list">
 
-          <ul class="inline wrap text_center">
+        <!-- genre_list -->
+        <div class="genre_list">
+          <ul class="inline flex text_center">
             <li class="flex"><a href="#"><h3>in evidenza</h3></a><div class="linea_green"></div></li>
             <li><a href="#"><h3>podcast</h3></a></li>
             <li><a href="#"><h3>classifiche</h3></a></li>
@@ -176,13 +177,13 @@
             <li><a href="#"><h3>nuove uscite</h3></a></li>
             <li><a href="#"><h3>scopri</h3></a></li>
           </ul>
-        </div>
+        </div><!-- genre_list -->
       </section>
 
       <!-- SECTION RECENTLY -->
       <section id="recently">
 
-        <h2>Recently played</h2>
+        <h2 id="titolo_js">Recently played</h2>
 
         <!-- blocco_card -->
         <div class="blocco_card flex">
@@ -487,6 +488,12 @@
     </div><!-- bar_comandi -->
 
   </div><!-- total_container -->
+
+  <script>
+
+    document.getElementById('titolo_js').innerHTML = 'Se io posso cambiare, allora tutto il mondo può cambiare!!!(...con JS)'
+
+  </script>
 
 </body>
 </html>
